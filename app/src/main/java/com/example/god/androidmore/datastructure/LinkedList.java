@@ -11,7 +11,7 @@ package com.example.god.androidmore.datastructure;
 import android.support.annotation.NonNull;
 import java.util.Iterator;
 
-public class ArrayList<T> implements List<T> {
+public class LinkedList<T> implements List<T> {
 
   @Override
   public boolean isEmpty() {
