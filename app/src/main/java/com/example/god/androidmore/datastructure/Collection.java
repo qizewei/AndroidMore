@@ -34,5 +34,4 @@ public interface Collection<T> extends Iterable{
 
   boolean equals(Object o);
 
-  int haseCode();
 }

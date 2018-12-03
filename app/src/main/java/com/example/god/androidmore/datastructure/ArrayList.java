@@ -13,14 +13,16 @@ import java.util.Iterator;
 
 public class ArrayList<T> implements List<T> {
 
+  private Object[] elementData;
+
   @Override
   public boolean isEmpty() {
-    return false;
+    return elementData.length == 0;
   }
 
   @Override
   public boolean contains(Object o) {
-    return false;
+    return indexOf(o) >= 0;
   }
 
   @NonNull
@@ -56,36 +58,50 @@ public class ArrayList<T> implements List<T> {
 
   @Override
   public void clear() {
-
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    return false;
-  }
-
-  @Override
-  public int haseCode() {
-    return 0;
+    for (int i = 0; i < elementData.length; i++) {
+      elementData[i] = null;
+    }
   }
 
   @Override
   public boolean remove(Object o) {
-    return false;
+    int num = indexOf(o) - elementData.length - 1;
+    System.arraycopy(elementData, indexOf(o) + 1, elementData, indexOf(o), num);
+    return true;
   }
 
   @Override
   public T get(int index) {
-    return null;
+    if (index > elementData.length) {
+      throw new IndexOutOfBoundsException(index + "越界");
+    }
+    return (T) elementData[index];
   }
 
   @Override
-  public T set(int index) {
-    return null;
+  public T set(int index, T t) {
+    if (index > elementData.length) {
+      throw new IndexOutOfBoundsException("index");
+    }
+    elementData[index] = t;
+    return t;
   }
 
   @Override
   public int indexOf(Object o) {
-    return 0;
+    if (o == null) {
+      for (int i = 0; i < elementData.length; i++) {
+        if (elementData[i] == null) {
+          return i;
+        }
+      }
+    } else {
+      for (int i = 0; i < elementData.length; i++) {
+        if (o.equals(elementData[i])) {
+          return i;
+        }
+      }
+    }
+    return -1;
   }
 }

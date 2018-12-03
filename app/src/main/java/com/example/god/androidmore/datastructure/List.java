@@ -11,7 +11,7 @@ package com.example.god.androidmore.datastructure;
 import android.support.annotation.NonNull;
 import java.util.Iterator;
 
-public interface List<T> extends Collection<T>{
+public interface List<T> extends Collection<T> {
 
   boolean isEmpty();
 
@@ -34,14 +34,12 @@ public interface List<T> extends Collection<T>{
 
   boolean equals(Object o);
 
-  int haseCode();
-
   //------------
- boolean remove(Object o);
+  boolean remove(Object o);
 
- T get(int index);
+  T get(int index);
 
- T set(int index);
+  T set(int index, T t);
 
- int indexOf(Object o);
+  int indexOf(Object o);
 }
