@@ -15,27 +15,15 @@ public interface List<T> extends Collection<T> {
 
   boolean isEmpty();
 
-  boolean contains(Object o);
-
-  @NonNull
-  Iterator iterator();
-
-  Object[] toArray();
-
   boolean add(T t);
-
-  boolean containsAll(Collection<?> c);
-
-  boolean addAll(Collection<? extends T> c);
-
-  boolean removeAll(Collection<? extends T> c);
 
   void clear();
 
   boolean equals(Object o);
 
-  //------------
   boolean remove(Object o);
+
+  boolean remove();
 
   T get(int index);
 

@@ -14,6 +14,7 @@ import java.util.Iterator;
 public class ArrayList<T> implements List<T> {
 
   private Object[] elementData;
+  private int size;
 
   @Override
   public boolean isEmpty() {
@@ -25,35 +26,10 @@ public class ArrayList<T> implements List<T> {
     return indexOf(o) >= 0;
   }
 
-  @NonNull
-  @Override
-  public Iterator iterator() {
-    return null;
-  }
-
-  @Override
-  public Object[] toArray() {
-    return new Object[0];
-  }
-
   @Override
   public boolean add(T t) {
-    return false;
-  }
-
-  @Override
-  public boolean containsAll(Collection<?> c) {
-    return false;
-  }
-
-  @Override
-  public boolean addAll(Collection<? extends T> c) {
-    return false;
-  }
-
-  @Override
-  public boolean removeAll(Collection<? extends T> c) {
-    return false;
+    elementData[size++]=t;
+    return true;
   }
 
   @Override

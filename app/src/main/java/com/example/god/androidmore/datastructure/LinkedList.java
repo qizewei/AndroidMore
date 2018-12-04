@@ -13,65 +13,78 @@ import java.util.Iterator;
 
 public class LinkedList<T> implements List<T> {
 
+  private Node<T> heard;
+  private Node<T> end;
+
   @Override
   public boolean isEmpty() {
-    return false;
-  }
-
-  @Override
-  public boolean contains(Object o) {
-    return false;
-  }
-
-  @NonNull
-  @Override
-  public Iterator iterator() {
-    return null;
-  }
-
-  @Override
-  public Object[] toArray() {
-    return new Object[0];
+    return heard.element == null;
   }
 
   @Override
   public boolean add(T t) {
-    return false;
+    if (t == null) {
+      throw new NullPointerException();
+    }
+    addLast(t);
+    return true;
   }
 
-  @Override
-  public boolean containsAll(Collection<?> c) {
-    return false;
-  }
-
-  @Override
-  public boolean addAll(Collection<? extends T> c) {
-    return false;
-  }
-
-  @Override
-  public boolean removeAll(Collection<? extends T> c) {
-    return false;
+  public void addLast(T t) {
+    Node<T> node = end;
+    Node<T> newLast = new Node<>(t, end, null);
+    node.next = newLast;
+    end = newLast;
   }
 
   @Override
   public void clear() {
-
+    heard.element = null;
+    heard.next = null;
   }
 
   @Override
-  public boolean equals(Object o) {
-    return false;
+  public boolean remove() {
+    removeLast();
+    return true;
+  }
+
+  private void removeLast() {
+    Node<T> l = end.pre;
+    l.next = null;
+  }
+
+  private T getFirst() {
+    return heard.element;
+  }
+
+  private T getLast() {
+    return end.element;
   }
 
   @Override
-  public int haseCode() {
-    return 0;
+  public int indexOf(Object o) {
+    int index = 0;
+    for (Node<T> i = heard; i != null; i = i.next) {
+      if (i.element.equals(o)) {
+        return index;
+      }
+      index++;
+    }
+    return -1;
   }
 
-  @Override
-  public boolean remove(Object o) {
-    return false;
+  private static class Node<E> {
+
+    E element;
+    Node<E> pre;
+    Node<E> next;
+
+    public Node(E element, Node<E> pre, Node<E> next) {
+      this.element = element;
+      this.pre = pre;
+      this.next = next;
+    }
   }
 
   @Override
@@ -80,12 +93,23 @@ public class LinkedList<T> implements List<T> {
   }
 
   @Override
-  public T set(int index) {
+  public T set(int index, T t) {
     return null;
   }
 
+
   @Override
-  public int indexOf(Object o) {
-    return 0;
+  public boolean equals(Object o) {
+    return false;
+  }
+
+  @Override
+  public boolean remove(Object o) {
+    return false;
+  }
+
+  @Override
+  public boolean contains(Object o) {
+    return false;
   }
 }

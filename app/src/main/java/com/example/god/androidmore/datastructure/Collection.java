@@ -11,24 +11,13 @@ package com.example.god.androidmore.datastructure;
 import android.support.annotation.NonNull;
 import java.util.Iterator;
 
-public interface Collection<T> extends Iterable{
+public interface Collection<T> {
 
   boolean isEmpty();
 
   boolean contains(Object o);
 
-  @NonNull
-  Iterator iterator();
-
-  Object[] toArray();
-
   boolean add(T t);
-
-  boolean containsAll(Collection<?> c);
-
-  boolean addAll(Collection<? extends T> c);
-
-  boolean removeAll(Collection<? extends T> c);
 
   void clear();
 
