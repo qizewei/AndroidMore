@@ -47,6 +47,11 @@ public class ArrayList<T> implements List<T> {
   }
 
   @Override
+  public boolean remove() {
+    return false;
+  }
+
+  @Override
   public T get(int index) {
     if (index > elementData.length) {
       throw new IndexOutOfBoundsException(index + "越界");

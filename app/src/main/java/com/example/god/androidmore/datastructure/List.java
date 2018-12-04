@@ -8,9 +8,6 @@
 
 package com.example.god.androidmore.datastructure;
 
-import android.support.annotation.NonNull;
-import java.util.Iterator;
-
 public interface List<T> extends Collection<T> {
 
   boolean isEmpty();
