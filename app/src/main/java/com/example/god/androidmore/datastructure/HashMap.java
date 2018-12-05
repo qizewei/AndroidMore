@@ -12,7 +12,13 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Objects;
 import java.util.Set;
+import java.util.Vector;
 
+/**
+ * Hashmap默认初始化大小16，负载因子0.75
+ * @param <K>
+ * @param <V>
+ */
 public class HashMap<K, V> {
 
   private Node<K, V>[] table;

@@ -11,6 +11,10 @@ package com.example.god.androidmore.datastructure;
 import android.support.annotation.NonNull;
 import java.util.Iterator;
 
+/**
+ *
+ * @param <T>
+ */
 public class LinkedList<T> implements List<T> {
 
   private Node<T> heard;

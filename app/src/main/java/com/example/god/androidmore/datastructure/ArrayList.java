@@ -9,8 +9,16 @@
 package com.example.god.androidmore.datastructure;
 
 import android.support.annotation.NonNull;
+import java.util.Arrays;
 import java.util.Iterator;
 
+/**
+ * ArrayList的本质是维护了一个对象数组，对ArrayList的增删改查即对数组进行操作
+ * 1. List接口中有sort方法，需要实现Comparator方法就能进行排序
+ * 2. List接口继承Collection，Collection集成Iterable
+ * 3. System.arraycopy  是用于复制数组的native方法
+ * @param <T>
+ */
 public class ArrayList<T> implements List<T> {
 
   private Object[] elementData;
