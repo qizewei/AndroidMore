@@ -8,6 +8,33 @@
 
 package com.example.god.androidmore.datastructure;
 
-public class LinkedHashMap {
+import com.example.god.androidmore.datastructure.HashMap.Node;
 
+public class LinkedHashMap<K, V> extends HashMap<K,V>{
+
+  static class LinkedHashMapEntry<K, V> extends HashMap.Node<K, V> {
+
+    LinkedHashMapEntry before, after;
+
+    LinkedHashMapEntry(int hash, K key, V value, Node<K, V> next) {
+      super(hash, key, value, next);
+    }
+  }
+
+  LinkedHashMapEntry<K,V> header;
+  LinkedHashMapEntry<K,V> tail;
+
+  boolean accessOrder = false;
+
+  public void setAccessOrder(boolean accessOrder) {
+    this.accessOrder = accessOrder;
+  }
+
+  private void LinkedNodeList(LinkedHashMapEntry<K,V> p){
+
+  }
+
+//  private V get(Object key){
+//
+//  }
 }
