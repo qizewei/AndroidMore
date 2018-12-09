@@ -10,8 +10,13 @@ package com.example.god.androidmore.algorithm;
 
 /**
  * 基数排序
- * 确定一个基数，将数组分成大小的两组，依次递归。
+ * 个位，十位，百位依次遍历进行排序
  */
 public class redaixSort {
+
+  public static int[] redaixSort(int[] src) {
+
+    return src;
+  }
 
 }

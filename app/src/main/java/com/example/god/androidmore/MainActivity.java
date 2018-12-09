@@ -9,6 +9,7 @@
 package com.example.god.androidmore;
 
 import static com.example.god.androidmore.algorithm.BubbleSort.BubbleSort;
+import static com.example.god.androidmore.algorithm.QuickSort.QuickSort;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -22,9 +23,12 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-    int[] src = {99, 2323, 9, 77, 44, 2, 87, 21, 32, 1};
+    int[] src = {99, 2323, 9, 77, 44, 2, 87, 21, 32, 54};
 
     logOut("冒泡排序", BubbleSort(src));
+
+    QuickSort(src, 0, src.length - 1);
+    logOut("快速排序", src);
   }
 
   private void logOut(String method, int[] src) {
