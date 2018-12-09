@@ -11,6 +11,7 @@ package com.example.god.androidmore.datastructure;
 import java.util.Map;
 
 /**
+ * 无序集合，多线程下不安全
  * Hashmap默认初始化大小16，负载因子0.75
  * key存在Set集合中（Set中数据不能相同），Value存在Collection中（可以相同）。
  * hashmap元素的key可以为空，key对应的index可以相同（链表）

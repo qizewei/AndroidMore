@@ -8,18 +8,29 @@
 
 package com.example.god.androidmore;
 
-import android.support.v7.app.AppCompatActivity;
+import static com.example.god.androidmore.algorithm.BubbleSort.BubbleSort;
+
 import android.os.Bundle;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
+
+  private static final String TAG = "MainActivity";
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+    int[] src = {99, 2323, 9, 77, 44, 2, 87, 21, 32, 1};
+
+    logOut("冒泡排序", BubbleSort(src));
+  }
+
+  private void logOut(String method, int[] src) {
+    Log.d(TAG, "logOut: " + method);
+    for (int i = 0; i < src.length; i++) {
+      Log.d(TAG, "logOut: " + src[i]);
+    }
   }
 }

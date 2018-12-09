@@ -8,6 +8,28 @@
 
 package com.example.god.androidmore.algorithm;
 
+/**
+ * 冒泡排序
+ * 第一个数从头到尾和数组的每个数比较，得出最值放入底部
+ * 仍从头开始，依次循环
+ */
 public class BubbleSort {
+
+  public static int[] BubbleSort(int[] src) {
+    for (int i = 0; i < src.length; i++) {
+      for (int j = 0; j < (src.length - i) - 1; j++) {
+        if (src[j] > src[j + 1]) {
+          replaceNum(src, j, j + 1);
+        }
+      }
+    }
+    return src;
+  }
+
+  public static void replaceNum(int[] src, int star, int end) {
+    int x = src[star];
+    src[star] = src[end];
+    src[end] = x;
+  }
 
 }
