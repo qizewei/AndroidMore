@@ -8,9 +8,9 @@
 
 package com.example.god.androidmore.datastructure;
 
-import android.support.annotation.NonNull;
-import java.util.Iterator;
-
+/**
+ * Collection集合创建了一些接口，Collection可以存储相同的对象，Map用来存储不相同的对象
+ */
 public interface Collection<T> {
 
   boolean isEmpty();

@@ -8,6 +8,11 @@
 
 package com.example.god.androidmore.datastructure;
 
+/**
+ * 线程不安全
+ * 每个节点添加头尾指针，构成双向链表
+ * LruCache的实现（Linkedhashmap默认插入排序，需要配置一个布尔值accessOrder来设置调用排序）。
+ */
 public class LinkedHashMap {
 
 }

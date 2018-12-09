@@ -8,9 +8,12 @@
 
 package com.example.god.androidmore.datastructure;
 
-
-import java.util.Stack;
-
+/**
+ * 后进先出
+ * 栈的经典应用：波兰表达式
+ * 中缀表达式转后缀表达式（数字输出，运算符进展，括号匹配出战，栈顶优先级低出栈）。
+ * 后缀表达式的计算。
+ */
 public class MyStack<T> {
 
   private Node<T> top;

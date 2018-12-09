@@ -9,7 +9,8 @@
 package com.example.god.androidmore.datastructure;
 
 /**
- * LinkedList
+ * LinkedList实现了Queue的接口
+ * 先进先出。先出的一端为队头，另一端为队尾。
  */
 public class MyQueue {
 
