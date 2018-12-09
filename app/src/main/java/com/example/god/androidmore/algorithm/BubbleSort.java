@@ -15,7 +15,7 @@ package com.example.god.androidmore.algorithm;
  */
 public class BubbleSort {
 
-  public static int[] BubbleSort(int[] src) {
+  public static void BubbleSort(int[] src) {
     for (int i = 0; i < src.length; i++) {
       for (int j = 0; j < (src.length - i) - 1; j++) {
         if (src[j] > src[j + 1]) {
@@ -23,7 +23,6 @@ public class BubbleSort {
         }
       }
     }
-    return src;
   }
 
   public static void replaceNum(int[] src, int star, int end) {

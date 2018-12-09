@@ -8,6 +8,27 @@
 
 package com.example.god.androidmore.algorithm;
 
+/**
+ * 选择排序
+ * 数组中找最小的（和第一位比较），然后在剩下的数据中找最小的放第二位，以此类推
+ */
 public class SelectionSort {
 
+  public static void selsctionSort(int[] src) {
+    for (int i = 0; i < src.length; i++) {
+      int min = i;
+      for (int j = i; j < src.length; j++) {
+        if (src[min] > src[j]) {
+          min = j;
+        }
+      }
+      replaceNum(src, min, i);
+    }
+  }
+
+  public static void replaceNum(int[] src, int star, int end) {
+    int x = src[star];
+    src[star] = src[end];
+    src[end] = x;
+  }
 }
