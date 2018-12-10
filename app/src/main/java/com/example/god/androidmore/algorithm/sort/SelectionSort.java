@@ -6,7 +6,7 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-package com.example.god.androidmore.algorithm;
+package com.example.god.androidmore.algorithm.sort;
 
 /**
  * 选择排序
