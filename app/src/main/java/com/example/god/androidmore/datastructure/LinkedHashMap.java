@@ -8,18 +8,13 @@
 
 package com.example.god.androidmore.datastructure;
 
-<<<<<<< HEAD
-import com.example.god.androidmore.datastructure.HashMap.Node;
-=======
 /**
  * 线程不安全
  * 每个节点添加头尾指针，构成双向链表
  * LruCache的实现（Linkedhashmap默认插入排序，需要配置一个布尔值accessOrder来设置调用排序）。
  */
-public class LinkedHashMap {
->>>>>>> 190ea3fa4da7d8126f1f2ad7d7ad68b9142e16c7
 
-public class LinkedHashMap<K, V> extends HashMap<K,V>{
+public class LinkedHashMap<K, V> extends HashMap<K, V> {
 
   static class LinkedHashMapEntry<K, V> extends HashMap.Node<K, V> {
 
@@ -30,8 +25,8 @@ public class LinkedHashMap<K, V> extends HashMap<K,V>{
     }
   }
 
-  LinkedHashMapEntry<K,V> header;
-  LinkedHashMapEntry<K,V> tail;
+  LinkedHashMapEntry<K, V> header;
+  LinkedHashMapEntry<K, V> tail;
 
   boolean accessOrder = false;
 
@@ -39,7 +34,7 @@ public class LinkedHashMap<K, V> extends HashMap<K,V>{
     this.accessOrder = accessOrder;
   }
 
-  private void LinkedNodeList(LinkedHashMapEntry<K,V> p){
+  private void LinkedNodeList(LinkedHashMapEntry<K, V> p) {
 
   }
 
