@@ -8,6 +8,9 @@
 
 package com.example.god.androidmore.datastructure;
 
+/**
+ * 线性表的接口
+ */
 public interface List<T> extends Collection<T> {
 
   boolean isEmpty();

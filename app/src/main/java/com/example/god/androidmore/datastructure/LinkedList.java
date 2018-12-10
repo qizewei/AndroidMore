@@ -8,11 +8,8 @@
 
 package com.example.god.androidmore.datastructure;
 
-import android.support.annotation.NonNull;
-import java.util.Iterator;
-
 /**
- *
+ *链式存储方式线性表（linkedList）：插入效率高，查询效率低
  * @param <T>
  */
 public class LinkedList<T> implements List<T> {

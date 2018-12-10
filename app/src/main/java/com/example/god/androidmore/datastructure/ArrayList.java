@@ -8,11 +8,8 @@
 
 package com.example.god.androidmore.datastructure;
 
-import android.support.annotation.NonNull;
-import java.util.Arrays;
-import java.util.Iterator;
-
 /**
+ * 顺序存储方式线性表（ArrayList）：查找效率高，插入删除效率低（ArrayList删除元素后，后面元素会向前位移）
  * ArrayList的本质是维护了一个对象数组，对ArrayList的增删改查即对数组进行操作
  * 1. List接口中有sort方法，需要实现Comparator方法就能进行排序
  * 2. List接口继承Collection，Collection集成Iterable
