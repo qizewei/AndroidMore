@@ -15,36 +15,23 @@ package com.example.god.androidmore.algorithm.sort;
 public class ShellSort {
 
   public static void shellSort(int[] src, int x) {
+    int l = src.length;
     if (x == 1) {
       return;
     }
     x = x >>> 1;
 
-    for (int n = 0; n * x < src.length; n++) {
-      for (int j = 0; j < n * x; j = j * n) {
-        if (src[n * x] <= src[n * j]) {
-          int p = src[n];
-          for (int i = n * x; i > j; i = i - x) {
-            src[i] = src[i - x];
-          }
-          src[n * j] = p;
-
+    for (int i = 0; i < x; i++) {
+      for (int j = i + x; j < l; j = j + x) {
+        int m = src[j];
+        int n;
+        for (n = (j - x); n >= 0 && m < src[n]; n = n - x) {
+          src[n + x] = src[n];
         }
+        src[n + x] = m;
       }
     }
-    //      if (src[i] <= src[j]) {
-//        int m = src[i];
-//        System.arraycopy(src, j, src, j + 1, i - j);
-//        src[j] = m;
-//        break;
-//      }
 
     shellSort(src, x);
-  }
-
-  public static void replaceNum(int[] src, int star, int end) {
-    int x = src[star];
-    src[star] = src[end];
-    src[end] = x;
   }
 }

@@ -9,6 +9,7 @@
 package com.example.god.androidmore;
 
 import static com.example.god.androidmore.algorithm.search.BinarySearch.binarySearch;
+import static com.example.god.androidmore.algorithm.sort.BubbleSort.BubbleSort;
 import static com.example.god.androidmore.algorithm.sort.SelectionSort.selsctionSort;
 import static com.example.god.androidmore.algorithm.sort.ShellSort.shellSort;
 
@@ -32,21 +33,22 @@ public class MainActivity extends AppCompatActivity {
 //    QuickSort(src, 0, src.length - 1);
 //    logOut("快速排序", src);
 //
-    selsctionSort(src);
-    logOut("选择排序", src);
-
-//    int i = sequenceSearch(src, 123);
-//    logOut("线性查找", src[i]);
-
-    int searchValue = 0;
-    int i = binarySearch(src, searchValue, 0, src.length-1);
-    logOut("二分查找", i, searchValue);
+//    selsctionSort(src);
+//    logOut("选择排序", src);
 
 //    insertionSort(src);
 //    logOut("插入排序", src);
 
-//    shellSort(src, src.length);
-////    logOut("希尔排序", src);
+    shellSort(src, src.length);
+    logOut("希尔排序", src);
+
+//    int i = sequenceSearch(src, 123);
+//    logOut("线性查找", src[i]);
+
+//    int searchValue = 0;
+//    int i = binarySearch(src, searchValue, 0, src.length-1);
+//    logOut("二分查找", i, searchValue);
+
   }
 
   private void logOut(String method, int[] src) {
