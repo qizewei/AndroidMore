@@ -8,7 +8,7 @@
 
 package com.example.god.androidmore;
 
-import static com.example.god.androidmore.algorithm.sort.InsertionSort.insertionSort;
+import static com.example.god.androidmore.algorithm.sort.ShellSort.shellSort;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -36,11 +36,11 @@ public class MainActivity extends AppCompatActivity {
 //    int i = sequenceSearch(src, 123);
 //    logOut("线性查找", src[i]);
 
-    insertionSort(src);
-    logOut("插入排序", src);
+//    insertionSort(src);
+//    logOut("插入排序", src);
 
-//    shellSort(src, src.length);
-//    logOut("希尔排序", src);
+    shellSort(src, src.length);
+    logOut("希尔排序", src);
   }
 
   private void logOut(String method, int[] src) {

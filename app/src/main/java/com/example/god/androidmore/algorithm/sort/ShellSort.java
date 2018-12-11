@@ -19,15 +19,26 @@ public class ShellSort {
       return;
     }
     x = x >>> 1;
-    int i = 0;
-    while (i + x < src.length) {
 
-      if (src[i] > src[i + x]) {
-        replaceNum(src, i, i + x);
+    for (int n = 0; n * x < src.length; n++) {
+      for (int j = 0; j < n * x; j = j * n) {
+        if (src[n * x] <= src[n * j]) {
+          int p = src[n];
+          for (int i = n * x; i > j; i = i - x) {
+            src[i] = src[i - x];
+          }
+          src[n * j] = p;
+
+        }
       }
-
-      i++;
     }
+    //      if (src[i] <= src[j]) {
+//        int m = src[i];
+//        System.arraycopy(src, j, src, j + 1, i - j);
+//        src[j] = m;
+//        break;
+//      }
+
     shellSort(src, x);
   }
 
