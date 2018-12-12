@@ -6,12 +6,25 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-package com.example.god.androidmore.algorithm.sort;
+package com.example.god.androidmore.algorithm.other;
 
 /**
- * 归并排序：二路归并排序
- * 将数组分每两个元素分成一组，然后两两排序并合并
+ * 递归算法
  */
-public class MergeSort {
+public class Recursion {
 
+  /**
+   * 汉诺塔问题
+   */
+  public static void Hanoi() {
+
+  }
+
+  /**
+   * 最大公约数
+   */
+  public static int MaxDivisor() {
+    int result = -1;
+    return result;
+  }
 }

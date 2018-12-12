@@ -8,6 +8,10 @@
 
 package com.example.god.androidmore.algorithm.sort;
 
+/**
+ * 堆排序
+ * 对数组进行堆的构建（使用递归），然后从构建好的大堆中依次拿出数据。
+ */
 public class HeapSort {
 
 }
