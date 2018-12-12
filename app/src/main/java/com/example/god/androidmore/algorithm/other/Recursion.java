@@ -25,7 +25,7 @@ public class Recursion {
       Log.d(TAG, "Hanoi: 1 " + from + "到" + to);
     } else {
       Hanoi(count - 1, from, to, mid);
-      Log.d(TAG, "Hanoi: " + count+" " + from + "到" + to);
+      Log.d(TAG, "Hanoi: " + count + " " + from + "到" + to);
       Hanoi(count - 1, mid, from, to);
     }
 
@@ -34,8 +34,11 @@ public class Recursion {
   /**
    * 最大公约数
    */
-  public static int MaxDivisor() {
-    int result = -1;
-    return result;
+  public static int MaxDivisor(int big, int small) {
+
+    if (small == 0) {
+      return big;
+    }
+    return MaxDivisor(small, big % small);
   }
 }

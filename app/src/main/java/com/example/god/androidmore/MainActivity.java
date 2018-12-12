@@ -9,6 +9,7 @@
 package com.example.god.androidmore;
 
 import static com.example.god.androidmore.algorithm.other.Recursion.Hanoi;
+import static com.example.god.androidmore.algorithm.other.Recursion.MaxDivisor;
 import static com.example.god.androidmore.algorithm.search.BinarySearch.binarySearch;
 import static com.example.god.androidmore.algorithm.sort.BubbleSort.BubbleSort;
 import static com.example.god.androidmore.algorithm.sort.SelectionSort.selsctionSort;
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
 //    汉诺塔问题
 //    Hanoi(3, "A", "B", "C");
 
+    Log.d(TAG, "onCreate: 最大公约数为" + MaxDivisor(9, 4));
   }
 
   private void logOut(String method, int[] src) {
