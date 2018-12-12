@@ -24,7 +24,10 @@ import java.util.Map;
 public class HashMap<K, V> {
 
   private Node<K, V>[] table;
-  private int length;
+  public int length;
+  //默认的负载因子
+  static final float DEFAULT_LOAD_FACTOR = 0.75f;
+  public float load_factor = DEFAULT_LOAD_FACTOR;
 
   static final int hash(Object key) {
     //通过hashCode来算出hash值，hash值对应table上的位置
@@ -138,15 +141,16 @@ public class HashMap<K, V> {
     }
   }
 
-  public V get(Object key) {
+  public Node get(Object key) {
     int hash = hash(key);
     if (table[hash]==null) {
       return null;
     }else {
       Node<K,V> x = table[hash];
       while (x!=null){
-        if(x.key==key)
-          return x.value;
+        if (x.key == key) {
+          return x;
+        }
         x=x.next;
       }
       return null;
