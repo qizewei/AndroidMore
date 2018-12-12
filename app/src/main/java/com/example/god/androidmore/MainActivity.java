@@ -8,6 +8,7 @@
 
 package com.example.god.androidmore;
 
+import static com.example.god.androidmore.algorithm.other.Recursion.Hanoi;
 import static com.example.god.androidmore.algorithm.search.BinarySearch.binarySearch;
 import static com.example.god.androidmore.algorithm.sort.BubbleSort.BubbleSort;
 import static com.example.god.androidmore.algorithm.sort.SelectionSort.selsctionSort;
@@ -39,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
 //    insertionSort(src);
 //    logOut("插入排序", src);
 
-    shellSort(src, src.length);
-    logOut("希尔排序", src);
+//    shellSort(src, src.length);
+//    logOut("希尔排序", src);
 
 //    int i = sequenceSearch(src, 123);
 //    logOut("线性查找", src[i]);
@@ -48,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
 //    int searchValue = 0;
 //    int i = binarySearch(src, searchValue, 0, src.length-1);
 //    logOut("二分查找", i, searchValue);
+
+//    汉诺塔问题
+//    Hanoi(3, "A", "B", "C");
 
   }
 
