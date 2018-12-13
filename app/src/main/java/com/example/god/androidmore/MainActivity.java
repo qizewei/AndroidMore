@@ -8,6 +8,7 @@
 
 package com.example.god.androidmore;
 
+import static com.example.god.androidmore.algorithm.other.Exhaustion.putDrive;
 import static com.example.god.androidmore.algorithm.other.Recursion.Hanoi;
 import static com.example.god.androidmore.algorithm.other.Recursion.MaxDivisor;
 import static com.example.god.androidmore.algorithm.search.BinarySearch.binarySearch;
@@ -54,7 +55,10 @@ public class MainActivity extends AppCompatActivity {
 //    汉诺塔问题
 //    Hanoi(3, "A", "B", "C");
 
-    Log.d(TAG, "onCreate: 最大公约数为" + MaxDivisor(9, 4));
+//    Log.d(TAG, "onCreate: 最大公约数为" + MaxDivisor(9, 4));
+
+//    泊松分酒
+    putDrive(12, 0, 0, 6, 12, 8, 5);
   }
 
   private void logOut(String method, int[] src) {
