@@ -16,6 +16,7 @@ import static com.example.god.androidmore.algorithm.sort.BubbleSort.BubbleSort;
 import static com.example.god.androidmore.algorithm.sort.MergeSort.mergeSort;
 import static com.example.god.androidmore.algorithm.sort.SelectionSort.selsctionSort;
 import static com.example.god.androidmore.algorithm.sort.ShellSort.shellSort;
+import static com.example.god.androidmore.algorithm.sort.redaixSort.redaixSort;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -60,10 +61,12 @@ public class MainActivity extends AppCompatActivity {
 
 //    泊松分酒
 //    putDrive(12, 0, 0, 6, 12, 8, 5);
+//
+//    mergeSort(src,0,src.length-1);
+//    logOut("归并排序", src);
 
-    mergeSort(src,0,src.length-1);
-    logOut("归并", src);
-
+    redaixSort(src);
+    logOut("基数排序", src);
   }
 
   private void logOut(String method, int[] src) {
