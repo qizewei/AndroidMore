@@ -1,7 +1,7 @@
 # AndroidMore
-## Android高级工程师的成长之路
-### 数据结构
-均为伪代码，注重思路<br/>
+# Android高级工程师的成长之路
+## 数据结构
+**均为伪代码，注重思路和实现方式**<br/>
 [ArrayList（顺序存储方式线性表）](https://github.com/QzwJuHao/AndroidMore/blob/master/app/src/main/java/com/example/god/androidmore/datastructure/ArrayList.java)
 <br/>
 [LinkedList（链式存储方式线性表）](https://github.com/QzwJuHao/AndroidMore/blob/master/app/src/main/java/com/example/god/androidmore/datastructure/LinkedList.java)
@@ -19,9 +19,9 @@
 [Tree（树）](https://github.com/QzwJuHao/AndroidMore/blob/master/app/src/main/java/com/example/god/androidmore/datastructure/Tree.java)
 <br/>
 
-### 算法
-##### 排序算法
-各个算法的实现,均通过单元测试<br/>
+## 算法
+#### 排序算法
+**各个算法的实现,均通过单元测试**<br/>
 [冒泡排序](https://github.com/QzwJuHao/AndroidMore/blob/master/app/src/main/java/com/example/god/androidmore/algorithm/sort/BubbleSort.java)
 <br/>
 [堆排序](https://github.com/QzwJuHao/AndroidMore/blob/master/app/src/main/java/com/example/god/androidmore/algorithm/sort/HeapSort.java)
@@ -38,7 +38,19 @@
 <br/>
 [基数排序](https://github.com/QzwJuHao/AndroidMore/blob/master/app/src/main/java/com/example/god/androidmore/algorithm/sort/redaixSort.java)
 <br/>
-##### 查找算法
+
+#### 查找算法
+[线性查找](https://github.com/QzwJuHao/AndroidMore/blob/master/app/src/main/java/com/example/god/androidmore/algorithm/search/SequenceSearch.java)
+<br/>
+[二分查找](https://github.com/QzwJuHao/AndroidMore/blob/master/app/src/main/java/com/example/god/androidmore/algorithm/search/BinarySearch.java)
+<br/>
+#### 其他算法
+[穷举思想案例：泊松分酒](https://github.com/QzwJuHao/AndroidMore/blob/master/app/src/main/java/com/example/god/androidmore/algorithm/other/Exhaustion.java)
+<br/>
+[递归思想案例：汉诺塔问题](https://github.com/QzwJuHao/AndroidMore/blob/master/app/src/main/java/com/example/god/androidmore/algorithm/other/Recursion.java)
+<br/>
+[递归思想案例：最大公约数问题](https://github.com/QzwJuHao/AndroidMore/blob/master/app/src/main/java/com/example/god/androidmore/algorithm/other/Recursion.java)
+<br/>
 
 #### 联系方式
 E-mail:qizewei@vip.qq.com<br/>
