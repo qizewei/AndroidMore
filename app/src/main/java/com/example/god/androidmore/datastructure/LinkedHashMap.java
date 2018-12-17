@@ -9,14 +9,16 @@
 package com.example.god.androidmore.datastructure;
 
 /**
- * 线程不安全
  * 每个节点添加头尾指针，构成双向链表
  * LruCache的实现（Linkedhashmap默认插入排序，需要配置一个布尔值accessOrder来设置调用排序）。
- * 迭代HashMap的顺序并不是HashMap放置的顺序。
+ * LinkedHashMap的实现就是HashMap+LinkedList的实现方式，以HashMap维护数据结构，以LinkList的方式维护数据插入顺序。
+ * 迭代HashMap的顺序并不是HashMap放置的顺序，Linkedhashmap有顺序，插入顺序或者调用顺序，默认采用插入。
+ * 线程不安全
+ *
  * next是用于维护HashMap指定table位置上连接的Entry的顺序的，before、After是用于维护Entry插入的先后顺序的。
  * 该循环双向链表的头部存放的是最久访问的节点或最先插入的节点，尾部为最近访问的或最近插入的节点，迭代器遍历方向是从链表的头部开始到链表尾部结束，在链表尾部有一个空的header节点，该节点不存放key-value内容，为LinkedHashMap类的成员属性，循环双向链表的入口。
- * 注意这个header，hash值为-1，其他都为null，也就是说这个header不放在数组中，就是用来指示开始元素和标志结束元素的。
  * header的目的是为了记录第一个插入的元素是谁，在遍历的时候能够找到第一个元素。
+ * 注意这个header，hash值为-1，其他都为null，也就是说这个header不放在数组中，就是用来指示开始元素和标志结束元素的。
  */
 
 public class LinkedHashMap<K, V> extends HashMap<K, V> {

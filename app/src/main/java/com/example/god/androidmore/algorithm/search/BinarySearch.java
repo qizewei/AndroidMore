@@ -8,6 +8,9 @@
 
 package com.example.god.androidmore.algorithm.search;
 
+/**
+ * 二分查找
+ */
 public class BinarySearch {
 
   public static int binarySearch(int[] src, int value, int left, int right) {

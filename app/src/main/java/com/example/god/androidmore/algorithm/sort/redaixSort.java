@@ -14,9 +14,35 @@ package com.example.god.androidmore.algorithm.sort;
  */
 public class redaixSort {
 
-  public static int[] redaixSort(int[] src) {
+  public static void redaixSort(int[] src) {
+    int x = 10;
+    while (true) {
+      int c = 0;
+      for (int i = 0; i < src.length; i++) {
+        for (int j = i; j > 0; j--) {
+          int m = src[j] % x;
+          int n = src[j - 1] % x;
+          if (m < n) {
+            replaceNum(src, j, j - 1);
+          }
+        }
+        if (src[i] / x != 0) {
+          c++;
+        }
+      }
 
-    return src;
+      if (c == 0) {
+        return;
+      }
+
+      x = x * 10;
+    }
+  }
+
+  public static void replaceNum(int[] src, int star, int end) {
+    int x = src[star];
+    src[star] = src[end];
+    src[end] = x;
   }
 
 }
