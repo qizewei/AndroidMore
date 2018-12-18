@@ -8,7 +8,9 @@
 
 package com.example.god.androidmore;
 
+import static com.example.god.androidmore.algorithm.other.DynamicProgramming.LCS;
 import static com.example.god.androidmore.algorithm.other.Exhaustion.putDrive;
+import static com.example.god.androidmore.algorithm.other.Other.Josephus;
 import static com.example.god.androidmore.algorithm.other.Recursion.Hanoi;
 import static com.example.god.androidmore.algorithm.other.Recursion.MaxDivisor;
 import static com.example.god.androidmore.algorithm.search.BinarySearch.binarySearch;
@@ -65,8 +67,10 @@ public class MainActivity extends AppCompatActivity {
 //    mergeSort(src,0,src.length-1);
 //    logOut("归并排序", src);
 
-    redaixSort(src);
-    logOut("基数排序", src);
+//    redaixSort(src);
+//    logOut("基数排序", src);
+
+    Josephus(7,3);
   }
 
   private void logOut(String method, int[] src) {

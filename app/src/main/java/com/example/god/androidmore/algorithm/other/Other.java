@@ -8,13 +8,41 @@
 
 package com.example.god.androidmore.algorithm.other;
 
+import android.util.Log;
+
 public class Other {
 
   /**
    * 约瑟夫问题
    */
-  public static void Josephus() {
+  public static void Josephus(int total,int count) {
+   class Node{
+     int n;
+     Node next;
 
+     public Node(int n) {
+       this.n = n;
+     }
+   }
+   Node header = new Node(0);
+   Node x = header;
+    for (int i = 1; i < total; i++) {
+      x.next = new Node(i);
+      x=x.next;
+    }
+    x.next=header;
+
+    Node m = header;
+    int p = 1;
+    while (m.n!=m.next.n){
+      if (p==count-1) {
+        m.next=m.next.next;
+        p=0;
+      }
+      m=m.next;
+      p=p+1;
+    }
+    Log.d("dsafasf", "Josephus: "+ m.n);
   }
 
   /**
