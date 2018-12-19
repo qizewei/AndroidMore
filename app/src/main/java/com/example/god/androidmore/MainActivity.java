@@ -8,6 +8,9 @@
 
 package com.example.god.androidmore;
 
+import static com.example.god.androidmore.algorithm.other.DynamicProgramming.DP;
+import static com.example.god.androidmore.algorithm.other.DynamicProgramming.LCS;
+
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -60,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
 
 //    约瑟夫问题
 //    Josephus(12,4);
+
+    DP("android","ahiroi");
   }
 
   private void logOut(String method, int[] src) {
