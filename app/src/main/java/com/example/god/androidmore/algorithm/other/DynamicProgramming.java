@@ -16,6 +16,7 @@ public class DynamicProgramming {
 
   /**
    * 最长公共子序列（Longest Common Subsequence,LCS）
+   * 先求出第一行和第一列的值，然后根据 对应的二位数组 性质求出剩余值。
    */
   public static void LCS(String strO, String strT) {
     char[] str1 = strO.toCharArray();

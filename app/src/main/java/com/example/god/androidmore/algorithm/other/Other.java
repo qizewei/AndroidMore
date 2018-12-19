@@ -12,37 +12,43 @@ import android.util.Log;
 
 public class Other {
 
+  private static final String TAG = "Other";
+
   /**
    * 约瑟夫问题
+   * 创建头尾相连的链表解决问题
    */
-  public static void Josephus(int total,int count) {
-   class Node{
-     int n;
-     Node next;
+  public static void Josephus(int total, int count) {
+    class Node {
 
-     public Node(int n) {
-       this.n = n;
-     }
-   }
-   Node header = new Node(0);
-   Node x = header;
-    for (int i = 1; i < total; i++) {
-      x.next = new Node(i);
-      x=x.next;
+      private int n;
+      private Node next;
+
+      private Node(int n) {
+        this.n = n;
+      }
     }
-    x.next=header;
+
+    Node header = new Node(1);
+    Node x = header;
+    for (int i = 2; i <= total; i++) {
+      x.next = new Node(i);
+      x = x.next;
+    }
+    x.next = header;
 
     Node m = header;
     int p = 1;
-    while (m.n!=m.next.n){
-      if (p==count-1) {
-        m.next=m.next.next;
-        p=0;
+    while (m.n != m.next.n) {
+      if (p == count - 1) {
+        Log.d(TAG, "Josephus: 枪毙" + m.next.n);
+        m.next = m.next.next;
+        p = 0;
       }
-      m=m.next;
-      p=p+1;
+      m = m.next;
+      p = p + 1;
     }
-    Log.d("dsafasf", "Josephus: "+ m.n);
+    Log.d(TAG, "Josephus: 剩余" + m.n);
   }
 
   /**

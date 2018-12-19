@@ -8,18 +8,6 @@
 
 package com.example.god.androidmore;
 
-import static com.example.god.androidmore.algorithm.other.DynamicProgramming.LCS;
-import static com.example.god.androidmore.algorithm.other.Exhaustion.putDrive;
-import static com.example.god.androidmore.algorithm.other.Other.Josephus;
-import static com.example.god.androidmore.algorithm.other.Recursion.Hanoi;
-import static com.example.god.androidmore.algorithm.other.Recursion.MaxDivisor;
-import static com.example.god.androidmore.algorithm.search.BinarySearch.binarySearch;
-import static com.example.god.androidmore.algorithm.sort.BubbleSort.BubbleSort;
-import static com.example.god.androidmore.algorithm.sort.MergeSort.mergeSort;
-import static com.example.god.androidmore.algorithm.sort.SelectionSort.selsctionSort;
-import static com.example.god.androidmore.algorithm.sort.ShellSort.shellSort;
-import static com.example.god.androidmore.algorithm.sort.redaixSort.redaixSort;
-
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -70,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
 //    redaixSort(src);
 //    logOut("基数排序", src);
 
-    Josephus(7,3);
+//    约瑟夫问题
+//    Josephus(12,4);
   }
 
   private void logOut(String method, int[] src) {

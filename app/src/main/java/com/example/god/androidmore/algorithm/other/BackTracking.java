@@ -12,6 +12,7 @@ public class BackTracking {
 
   /**
    * 八皇后问题，end = 92
+   * 先获取单列内可放置的集合，递归遍历所有可能的
    */
   public static void EightQueens() {
 
