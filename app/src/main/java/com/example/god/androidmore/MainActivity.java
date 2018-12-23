@@ -8,8 +8,6 @@
 
 package com.example.god.androidmore;
 
-import static com.example.god.androidmore.algorithm.other.BackTracking.queueQuestion;
-
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -23,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 //    八皇后问题
-    queueQuestion();
+//    queueQuestion();
 
 //    贪心背包问题
 //    int MAX_WEIGHT = 150;
