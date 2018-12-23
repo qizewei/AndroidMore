@@ -8,8 +8,7 @@
 
 package com.example.god.androidmore;
 
-import static com.example.god.androidmore.algorithm.other.DynamicProgramming.DP;
-import static com.example.god.androidmore.algorithm.other.DynamicProgramming.LCS;
+import static com.example.god.androidmore.algorithm.other.Greedy.packageQuestion;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -23,7 +22,13 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-    int[] src = {99, 2323, 9, 77, 44, 2, 87, 21, 32, 54};
+
+    int MAX_WEIGHT = 150;
+    int[] weight = {35, 30, 60, 50, 40, 10, 25};
+    int[] value = {10, 40, 30, 50, 35, 40, 30};
+    packageQuestion(MAX_WEIGHT, weight, value);
+
+//    int[] src = {99, 2323, 9, 77, 44, 2, 87, 21, 32, 54};
 
 //    BubbleSort(src);
 //    logOut("冒泡排序", src);
@@ -64,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
 //    约瑟夫问题
 //    Josephus(12,4);
 
-    DP("android","ahiroi");
+//    DP("android","ahiroi");
   }
 
   private void logOut(String method, int[] src) {
