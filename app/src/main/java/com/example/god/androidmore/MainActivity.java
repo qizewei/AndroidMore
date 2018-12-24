@@ -8,7 +8,7 @@
 
 package com.example.god.androidmore;
 
-import static com.example.god.androidmore.algorithm.other.BackTracking.queueQuestion;
+import static com.example.god.androidmore.algorithm.other.DivideAndConquer.treamQuestion;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -22,8 +22,11 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+//    球队比赛排列问题
+    treamQuestion(8);
+
 //    八皇后问题
-    queueQuestion();
+//    queueQuestion();
 
 //    贪心背包问题
 //    int MAX_WEIGHT = 150;
