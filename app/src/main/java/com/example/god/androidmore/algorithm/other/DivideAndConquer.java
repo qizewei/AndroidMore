@@ -10,13 +10,13 @@ package com.example.god.androidmore.algorithm.other;
 
 public class DivideAndConquer {
 
-  public static void treamQuestion(int num) {
+  public static void TreamQuestion(int num) {
     int[][] datas = new int[num][num];
     EightTream(datas, datas.length);
-    printResult(datas);
+    PrintResult(datas);
   }
 
-  public static void printResult(int datas[][]) {
+  public static void PrintResult(int datas[][]) {
     for (int i = 0; i < datas.length; i++) {
       for (int j = 0; j < datas.length; j++) {
         System.out.print(datas[i][j]);
@@ -52,4 +52,53 @@ public class DivideAndConquer {
     }
   }
 
+
+  static int type = 0;
+
+  public static void ChessBoardQuestion(int num) {
+    int[][] datas = new int[num][num];
+    ChessBoard(1, 0, 0, 0, datas.length, datas);
+    PrintResult(datas);
+  }
+
+  public static void ChessBoard(int spcR, int spcC, int starR, int starC, int num, int[][] data) {
+
+    if (num != 1) {
+      int m = num / 2;
+      type = type % 9 + 1;
+      int n = type;
+
+      //左上角
+      if (spcR < starR + m && spcC < starC + m) {
+        ChessBoard(spcR, spcC, starR, starC, m, data);
+      } else {
+        data[starR + m - 1][starC + m - 1] = n;
+        ChessBoard(starR + m - 1, starC + m - 1, starR, starC, m, data);
+      }
+
+      //左下角
+      if (spcR < starR + m && spcC >= starC + m) {
+        ChessBoard(spcR, spcC, starR, starC + m, m, data);
+      } else {
+        data[starR + m - 1][starC + m] = n;
+        ChessBoard(starR + m - 1, starC + m, starR, starC + m, m, data);
+      }
+
+      //右上角
+      if (spcR >= starR + m && spcC < starC + m) {
+        ChessBoard(spcR, spcC, starR + m, starC, m, data);
+      } else {
+        data[starR + m][starC + m - 1] = n;
+        ChessBoard(starR + m, starC + m - 1, starR + m, starC, m, data);
+      }
+
+      //右下角
+      if (spcR >= starR + m && spcC >= starC + m) {
+        ChessBoard(spcR, spcC, starR + m, starC + m, m, data);
+      } else {
+        data[starR + m][starC + m] = n;
+        ChessBoard(starR + m, starC + m, starR + m, starC + m, m, data);
+      }
+    }
+  }
 }
