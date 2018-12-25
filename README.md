@@ -51,7 +51,11 @@
 <br/>
 [递归思想案例：最大公约数问题](https://github.com/QzwJuHao/AndroidMore/blob/master/app/src/main/java/com/example/god/androidmore/algorithm/other/Recursion.java)
 <br/>
-[动态规划法思想案例：最长公共子序列和最长公共子串问题](https://github.com/QzwJuHao/AndroidMore/blob/master/app/src/main/java/com/example/god/androidmore/algorithm/other/DynamicProgramming.java)
+[动态规划法思想案例：最长公共子序列 + 最长公共子串问题](https://github.com/QzwJuHao/AndroidMore/blob/master/app/src/main/java/com/example/god/androidmore/algorithm/other/DynamicProgramming.java)
+<br/>
+[回溯法思想案例：八皇后问题](https://github.com/QzwJuHao/AndroidMore/blob/master/app/src/main/java/com/example/god/androidmore/algorithm/other/BackTracking.java)
+<br/>
+[分治法思想案例：球队比赛排列问题 + L型骨牌问题](https://github.com/QzwJuHao/AndroidMore/blob/master/app/src/main/java/com/example/god/androidmore/algorithm/other/DivideAndConquer.java)
 <br/>
 #### 其他算法
 [约瑟夫问题](https://github.com/QzwJuHao/AndroidMore/blob/master/app/src/main/java/com/example/god/androidmore/algorithm/other/Other.java)
