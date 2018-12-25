@@ -8,7 +8,7 @@
 
 package com.example.god.androidmore;
 
-import static com.example.god.androidmore.algorithm.other.DivideAndConquer.ChessBoardQuestion;
+import static com.example.god.androidmore.algorithm.sort.HeapSort.heapSort;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     setContentView(R.layout.activity_main);
 
 //    L型骨牌问题
-    ChessBoardQuestion(4);
+//    ChessBoardQuestion(4);
 
 //    球队比赛排列问题
 //    TreamQuestion(8);
@@ -38,7 +38,9 @@ public class MainActivity extends AppCompatActivity {
 //    int[] value = {10, 40, 30, 50, 35, 40, 30};
 //    packageQuestion(MAX_WEIGHT, weight, value);
 
-//    int[] src = {99, 2323, 9, 77, 44, 2, 87, 21, 32, 54};
+    int[] src = {99, 2323, 9, 77, 44, 2, 87, 21, 32, 54};
+    heapSort(src);
+    logOut("堆排序", src);
 
 //    BubbleSort(src);
 //    logOut("冒泡排序", src);
