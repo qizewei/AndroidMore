@@ -10,19 +10,14 @@ package com.example.god.androidmore.algorithm.other;
 
 public class DivideAndConquer {
 
+  /**
+   * 球队比赛排列问题
+   * @param num
+   */
   public static void TreamQuestion(int num) {
     int[][] datas = new int[num][num];
     EightTream(datas, datas.length);
     PrintResult(datas);
-  }
-
-  public static void PrintResult(int datas[][]) {
-    for (int i = 0; i < datas.length; i++) {
-      for (int j = 0; j < datas.length; j++) {
-        System.out.print(datas[i][j]);
-      }
-      System.out.print("\n");
-    }
   }
 
   public static void EightTream(int[][] datas, int num) {
@@ -52,6 +47,7 @@ public class DivideAndConquer {
     }
   }
 
+  // L型骨牌问题
 
   static int type = 0;
 
@@ -99,6 +95,19 @@ public class DivideAndConquer {
         data[starR + m][starC + m] = n;
         ChessBoard(starR + m, starC + m, starR + m, starC + m, m, data);
       }
+    }
+  }
+
+  /**
+   * 打印结果
+   * @param datas
+   */
+  public static void PrintResult(int datas[][]) {
+    for (int i = 0; i < datas.length; i++) {
+      for (int j = 0; j < datas.length; j++) {
+        System.out.print(datas[i][j]);
+      }
+      System.out.print("\n");
     }
   }
 }
