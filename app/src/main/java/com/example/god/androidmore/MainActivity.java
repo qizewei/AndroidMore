@@ -8,6 +8,7 @@
 
 package com.example.god.androidmore;
 
+import static com.example.god.androidmore.algorithm.other.Other.Multiplication;
 import static com.example.god.androidmore.algorithm.sort.HeapSort.heapSort;
 
 import android.os.Bundle;
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+
+    Multiplication("789654","789654");
 
 //    L型骨牌问题
 //    ChessBoardQuestion(4);
@@ -38,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
 //    int[] value = {10, 40, 30, 50, 35, 40, 30};
 //    packageQuestion(MAX_WEIGHT, weight, value);
 
-    int[] src = {99, 2323, 9, 77, 44, 2, 87, 21, 32, 54};
-    heapSort(src);
-    logOut("堆排序", src);
+//    int[] src = {99, 2323, 9, 77, 44, 2, 87, 21, 32, 54};
+//    heapSort(src);
+//    logOut("堆排序", src);
 
 //    BubbleSort(src);
 //    logOut("冒泡排序", src);
