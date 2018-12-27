@@ -60,7 +60,10 @@
 #### 其他算法
 [约瑟夫问题](https://github.com/QzwJuHao/AndroidMore/blob/master/app/src/main/java/com/example/god/androidmore/algorithm/other/Other.java)
 <br/>
+[大数相乘问题](https://github.com/QzwJuHao/AndroidMore/blob/master/app/src/main/java/com/example/god/androidmore/algorithm/other/Other.java)
+<br/>
 
 #### 联系方式
+博客：https://blog.csdn.net/qizewei123<br/>
 E-mail:qizewei@vip.qq.com<br/>
 微信：779754469
