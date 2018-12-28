@@ -8,109 +8,97 @@
 
 package com.example.god.androidmore.datastructure;
 
-import static com.example.god.androidmore.datastructure.HashMap.hash;
+//图-临接矩阵实现
+public class Graph {
 
-import android.util.Log;
+  private int length;
+  private int[] labels;
+  private int[][] tables;
+  private boolean[] isVisited;
+  static int MAX = 8000;
 
-/**
- * 图中的元素称为顶点，顶点之间的连线叫做边，边分为无向边和有向边，有向边也称为弧，弧有弧头和弧尾。
- * 弧有与之对应的数字，成为权。
- * 任意两点之间是联通的，称为连通图。
- * 图中一个顶点可以连接无数个顶点
- * 无向图定点的边数叫度，有向图顶点的边数叫出度和入度。
- * 图的实现：1. 邻接矩阵（一个一维数组表示顶点信息，一个二维数组存储弧的信息）。
- * 图的实现：2.  邻接表（散链列表）
- *
- * 图的散链列表的实现
- */
-public class Graph<K, T> {
+  public Graph(int length) {
+    this.length = length;
+    labels = new int[length];
+    tables = new int[length][length];
+    isVisited = new boolean[length];
 
-  GNode[] table;
-  int length;
-  private static final String TAG = "Graph";
+    for (int i = 0; i < length; i++) {
+      labels[i] = i;
+    }
+  }
 
   /**
-   * 构建一个table上的节点，该节点所连接的点 即为 该顶点在图中锁链的所有顶点
+   * 入度
    */
-  private GNode BuildNode(GNode<K, T> src, GNode<K, T>... linkedNode) {
-    GNode<K, T> x = src;
-    for (int i = 0; i < linkedNode.length; i++) {
-      x.point = linkedNode[i];
-      x = linkedNode[i];
-    }
-    x.point = null;
-    return src;
+
+//  public int[] getVertexs() {
+////    return vertexs;
+//  }
+  public void setVertexs(int[] vertexs) {
+//    this.vertexs = vertexs;
   }
 
-  private void addNode(GNode newNode) {
-    GNode gNode = table[hash(newNode.k)];
-    if (gNode != null) {
-      Log.d(TAG, "addNode: 该节点已经存在");
-      return;
-    }
-    gNode = newNode;
-    length++;
-  }
-
-  private void removeNode(GNode oldNode) {
-    GNode oldX = oldNode;
-    while (oldX.point != null) {
-      GNode<K, T> x = table[hash(oldX.point.k)].point;
-      GNode<K, T> before = table[hash(oldX.point.k)];
-      while (x != null) {
-        if (x.k == oldX.point.k) {
-          before.point = x.point;
-          break;
-        }
-        before = x;
-        x = x.point;
+  //获取某个节点的度
+  public int getOutDegree(int m) {
+    int result = 0;
+    for (int i = 0; i < length; i++) {
+      if (tables[m][length] != 0 && tables[m][length] != MAX) {
+        result++;
       }
-      oldX = oldX.point;
     }
-    table[hash(oldNode.k)] = null;
-    length--;
+    return result;
   }
 
-  private GNode getGNode(K k) {
-    return table[hash(k)];
+  //获取某个节点的第一个临接节点
+  public int getFirstNeighbor(int m) {
+    for (int i = 0; i < length; i++) {
+      if (tables[m][length] != 0 && tables[m][length] != MAX) {
+        return tables[m][length];
+      }
+    }
+    return -1;
   }
 
-
-  private static class GNode<K, T> {
-
-    GNode<K, T> point;
-    int weight;
-    T v;
-    K k;
-
-    public GNode(GNode<K, T> point, int weight, T v) {
-      this.point = point;
-      this.weight = weight;
-      this.v = v;
+  //根据前一个邻接点的下标来取得下一个邻接点
+  public int getNextNeighbor(int m, int x) {
+    for (int i = x; i < length; i++) {
+      if (tables[m][length] != 0 && tables[m][length] != MAX) {
+        return tables[m][length];
+      }
     }
+    return -1;
+  }
 
-    public GNode<K, T> getPoint() {
-      return point;
-    }
-
-    public void setPoint(GNode<K, T> point) {
-      this.point = point;
-    }
-
-    public int getWeight() {
-      return weight;
-    }
-
-    public void setWeight(int weight) {
-      this.weight = weight;
-    }
-
-    public T getV() {
-      return v;
-    }
-
-    public void setV(T v) {
-      this.v = v;
+  //  图的深度优先遍历算法:深度优先遍历一个节点
+  private void depthFirstSearch(int m) {
+    isVisited[m] = true;
+    int x = getFirstNeighbor(m);
+    while (x != -1) {
+      if (!isVisited[x]) {
+        System.out.print("遍历到" + x);
+        depthFirstSearch(x);
+      }
+      x = getNextNeighbor(m, x);
     }
   }
+
+  // 遍历所有节点，防止出现断掉的顶点未遍历，
+  // 然后重置isVisited数组以备下次遍历
+  public void depthFirstSearch() {
+    isVisited = new boolean[length];
+    for (int i = 0; i < length; i++) {
+      if (!isVisited[i]) {
+        System.out.print("遍历到" + i);
+        depthFirstSearch(i);
+      }
+    }
+    isVisited = new boolean[length];
+  }
+
+  //实现广度优先遍历
+  public void broadFirstSearch(int m) {
+
+  }
+
 }
