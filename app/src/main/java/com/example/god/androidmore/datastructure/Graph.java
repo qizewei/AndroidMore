@@ -8,6 +8,8 @@
 
 package com.example.god.androidmore.datastructure;
 
+import java.util.Queue;
+
 //图-临接矩阵实现
 public class Graph {
 
@@ -32,11 +34,12 @@ public class Graph {
    * 入度
    */
 
-//  public int[] getVertexs() {
-////    return vertexs;
-//  }
+  public int[] getVertexs() {
+    return labels;
+  }
+
   public void setVertexs(int[] vertexs) {
-//    this.vertexs = vertexs;
+    this.labels = vertexs;
   }
 
   //获取某个节点的度
@@ -98,7 +101,37 @@ public class Graph {
 
   //实现广度优先遍历
   public void broadFirstSearch(int m) {
+    MyQueue myQueue = new MyQueue();
+    isVisited[m]=true;
+    myQueue.enQueue(m);
+    for (int i = 0; i < tables[m].length; i++) {
+      if (tables[m][i]!=0&&tables[m][i]!=MAX&&!isVisited[i]) {
+        myQueue.enQueue(i);
+      }
+    }
 
+  }
+
+  // Prim算法 遍历,并显示权重
+  public static void prim(int m, int length, int[][] tables) {
+    int[] repleData = tables[m];
+    for (int i = 0; i < length; i++) {
+
+      int small = MAX;
+      for (int j = 0; j < length; j++) {
+        if (repleData[j] != 0 && repleData[j] != MAX && repleData[j] < small) {
+          System.out.print("节点：" + j + " 权重：" + small);
+          small = tables[m][j];
+          repleData[j] = 0;
+        }
+      }
+
+      for (int j = 0; j < length; j++) {
+        if (tables[small][j] != 0 && tables[small][j] != MAX && tables[small][j] < repleData[j]) {
+          repleData[j] = tables[small][j];
+        }
+      }
+    }
   }
 
 }
