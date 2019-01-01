@@ -8,9 +8,14 @@
 
 package com.example.god.androidmore.datastructure;
 
-import java.util.Queue;
+import java.util.LinkedList;
 
-//图-临接矩阵实现
+/**
+ * 图-临接矩阵实现
+ * 图的两种遍历：深度优先遍历，广度优先遍历
+ * 图的最小生成树的两种算法：普利姆算法，克鲁斯卡尔算法
+ */
+
 public class Graph {
 
   private int length;
@@ -29,10 +34,6 @@ public class Graph {
       labels[i] = i;
     }
   }
-
-  /**
-   * 入度
-   */
 
   public int[] getVertexs() {
     return labels;
@@ -99,20 +100,41 @@ public class Graph {
     isVisited = new boolean[length];
   }
 
-  //实现广度优先遍历
-  public void broadFirstSearch(int m) {
+  //实现广度优先遍历1:
+  public void broadFirstSearchF(int m) {
     MyQueue myQueue = new MyQueue();
-    isVisited[m]=true;
+    isVisited[m] = true;
     myQueue.enQueue(m);
     for (int i = 0; i < tables[m].length; i++) {
-      if (tables[m][i]!=0&&tables[m][i]!=MAX&&!isVisited[i]) {
+      if (tables[m][i] != 0 && tables[m][i] != MAX && !isVisited[i]) {
+        isVisited[i] = true;
         myQueue.enQueue(i);
       }
     }
-
   }
 
-  // Prim算法 遍历,并显示权重
+  //实现广度优先遍历2:
+  public void broadFirstSearchT(int m) {
+    LinkedList<Object> myQueue = new LinkedList<>();
+    isVisited[m] = true;
+    myQueue.add(m);
+    while (!myQueue.isEmpty()) {
+      int p = (int) myQueue.removeFirst();
+      int x = getFirstNeighbor(p);
+      while (x != -1) {
+        if (!isVisited[x]) {
+          isVisited[x] = true;
+          x = getNextNeighbor(x, p);
+        }
+      }
+    }
+  }
+
+  /**
+   * 普利姆算法：
+   * 获取一个顶点A和它连接的顶点数组X，然后连接权值最小的顶点B，并将B连接的顶点数组合并到X，
+   * 仍从X中找出权值最小的顶点连接，以此类推。
+   */
   public static void prim(int m, int length, int[][] tables) {
     int[] repleData = tables[m];
     for (int i = 0; i < length; i++) {
@@ -134,4 +156,72 @@ public class Graph {
     }
   }
 
+  /**
+   * 克鲁斯卡尔算法：
+   * Edge edge0 = new Edge(int begin,int end, int weight);
+   * begin为边的起始顶点，end为边的结束顶点，weight为边的权重
+   * 通过构建边的数组来进行计算。
+   * 思想：按权重从小到大遍历，构成回环的边舍弃
+   *
+   * @param dataSize
+   * @param datas Edge的集合，按权重从小到大排列
+   */
+  int[] results;
+
+  public void Kruskal(int dataSize, Edge[] datas) {
+    results = new int[dataSize];
+    for (int i = 0; i < datas.length; i++) {
+      int m = find(datas[i].begin);
+      int n = find(datas[i].end);
+      if (n != m) {
+        results[m] = n;
+      }
+    }
+
+  }
+
+  //找到最终节点
+  int find(int m) {
+    while (results[m] != 0) {
+      m = results[m];
+    }
+    return m;
+  }
+
+  class Edge {
+
+    int begin;
+    int end;
+    int weight;
+
+    public int getBegin() {
+      return begin;
+    }
+
+    public void setBegin(int begin) {
+      this.begin = begin;
+    }
+
+    public int getEnd() {
+      return end;
+    }
+
+    public void setEnd(int end) {
+      this.end = end;
+    }
+
+    public int getWeight() {
+      return weight;
+    }
+
+    public void setWeight(int weight) {
+      this.weight = weight;
+    }
+
+    public Edge(int begin, int end, int weight) {
+      this.begin = begin;
+      this.end = end;
+      this.weight = weight;
+    }
+  }
 }
