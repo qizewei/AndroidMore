@@ -131,6 +131,7 @@ public class Graph {
   }
 
   /**
+   * 最小生成树：
    * 普利姆算法：
    * 获取一个顶点A和它连接的顶点数组X，然后连接权值最小的顶点B，并将B连接的顶点数组合并到X，
    * 仍从X中找出权值最小的顶点连接，以此类推。
@@ -157,6 +158,7 @@ public class Graph {
   }
 
   /**
+   * 最小生成树
    * 克鲁斯卡尔算法：
    * Edge edge0 = new Edge(int begin,int end, int weight);
    * begin为边的起始顶点，end为边的结束顶点，weight为边的权重
@@ -222,6 +224,36 @@ public class Graph {
       this.begin = begin;
       this.end = end;
       this.weight = weight;
+    }
+  }
+
+  /**
+   * 最短路径：
+   * 迪杰斯特拉算法：
+   * 获取一个顶点A和它连接的顶点数组X，然后连接最小权值(M)的顶点B，然后将B顶点的数组P整合到数组X(数组P相加M和数组X取最小值)
+   */
+  public void Dijkstra(int length, int[][] tables) {
+    results = new int[length];
+    results[0] = 0;
+    isVisited[0] = true;
+    results = tables[0];
+    for (int i = 1; i < length; i++) {
+
+      int min = MAX;
+      int k = 0;
+      for (int j = 0; j < tables[i].length; j++) {
+        if (!isVisited[j] && tables[i][j] < min) {
+          min = tables[i][j];
+          k = j;
+        }
+      }
+
+      for (int j = 0; j < length; j++) {
+        if (!isVisited[j] && tables[k][j] + min < results[j]) {
+          results[j] = min + tables[k][j];
+        }
+      }
+
     }
   }
 }
