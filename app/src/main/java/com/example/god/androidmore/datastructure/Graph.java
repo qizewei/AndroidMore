@@ -101,20 +101,7 @@ public class Graph {
     isVisited = new boolean[length];
   }
 
-  //实现广度优先遍历1:
-  public void broadFirstSearchF(int m) {
-    MyQueue myQueue = new MyQueue();
-    isVisited[m] = true;
-    myQueue.enQueue(m);
-    for (int i = 0; i < tables[m].length; i++) {
-      if (tables[m][i] != 0 && tables[m][i] != MAX && !isVisited[i]) {
-        isVisited[i] = true;
-        myQueue.enQueue(i);
-      }
-    }
-  }
-
-  //实现广度优先遍历2:
+  //实现广度优先遍历:
   public void broadFirstSearchT(int m) {
     LinkedList<Object> myQueue = new LinkedList<>();
     isVisited[m] = true;
@@ -125,6 +112,7 @@ public class Graph {
       while (x != -1) {
         if (!isVisited[x]) {
           isVisited[x] = true;
+          myQueue.add(x);
           x = getNextNeighbor(x, p);
         }
       }
