@@ -132,11 +132,12 @@ public class Graph {
       int small = MAX;
       for (int j = 0; j < length; j++) {
         if (repleData[j] != 0 && repleData[j] != MAX && repleData[j] < small) {
-          System.out.print("节点：" + j + " 权重：" + small);
           small = tables[m][j];
           repleData[j] = 0;
         }
       }
+
+      System.out.print("节点：" + i + " 最小权重：" + small);
 
       for (int j = 0; j < length; j++) {
         if (tables[small][j] != 0 && tables[small][j] != MAX && tables[small][j] < repleData[j]) {
