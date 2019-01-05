@@ -13,6 +13,8 @@ import static com.example.god.androidmore.datastructure.HashMap.hash;
 import android.util.Log;
 
 /**
+ * 图的邻接表的实现
+ *
  * 图中的元素称为顶点，顶点之间的连线叫做边，边分为无向边和有向边，有向边也称为弧，弧有弧头和弧尾。
  * 弧有与之对应的数字，成为权。
  * 任意两点之间是联通的，称为连通图。
@@ -21,7 +23,6 @@ import android.util.Log;
  * 图的实现：1. 邻接矩阵（一个一维数组表示顶点信息，一个二维数组存储弧的信息）。
  * 图的实现：2.  邻接表（散链列表）
  *
- * 图的邻接表的实现
  */
 public class GraphLinekd<K, T> {
 

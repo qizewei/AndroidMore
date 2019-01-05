@@ -11,13 +11,15 @@ package com.example.god.androidmore.datastructure;
 import java.util.Map;
 
 /**
+ * key存在Set集合中（Set中数据不能相同），Value存在Collection中（可以相同）。
  * 无序集合，多线程下不安全
  * Hashmap默认初始化大小16，负载因子0.75
- * key存在Set集合中（Set中数据不能相同），Value存在Collection中（可以相同）。
  * hashmap元素的key可以为空，key对应的index可以相同（链表）
  * JDK 1.8 以前 HashMap的实现是数组+链表，即使哈希函数取得再好，也很难达到元素百分百均匀分布。
  * 针对这种情况，JDK 1.8 中引入了 红黑树（查找时间复杂度为O(logn)）来优化这个问题,
  * 红黑树是自动平衡的二叉查找树，通过变色，左转，右转来实现平衡。
+ *
+ * 通过 Node<K,V> 对象实现 HashMap
  * @param <K>
  * @param <V>
  */

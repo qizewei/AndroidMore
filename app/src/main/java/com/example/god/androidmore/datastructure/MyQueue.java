@@ -8,11 +8,11 @@
 
 package com.example.god.androidmore.datastructure;
 
-import java.util.LinkedList;
-
 /**
  * LinkedList实现了Queue的接口
  * 先进先出。先出的一端为队头，另一端为队尾。
+ *
+ * LinkedList就是天生的队列实现。
  */
 public class MyQueue {
 

@@ -13,7 +13,13 @@ package com.example.god.androidmore.datastructure;
  * ArrayList的本质是维护了一个对象数组，对ArrayList的增删改查即对数组进行操作
  * 1. List接口中有sort方法，需要实现Comparator方法就能进行排序
  * 2. List接口继承Collection，Collection集成Iterable
- * 3. System.arraycopy  是用于复制数组的native方法
+ * 3. System.arraycopy  是用于复制数组的native方法，应学会使用。
+ *
+ *  Vector：
+ *  矢量队列，它是JDK1.0版本添加的类。
+ *  和ArrayList类似，内部维护一个对象数组。
+ *  Vector 实现了RandmoAccess接口，即提供了随机访问功能。
+ *  Vector中的操作是线程安全的,但比ArrayList稍微慢。
  * @param <T>
  */
 public class ArrayList<T> implements List<T> {

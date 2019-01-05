@@ -10,6 +10,12 @@ package com.example.god.androidmore.datastructure;
 
 import java.util.Stack;
 
+/**
+ * 图的拓扑排序：
+ * 通过栈的数据结构，先压入入度为0的顶点，然后逐个出栈。
+ * 当一个顶点出栈后，图生成新的入度为零的顶点，便将新生成的入度为0的顶点入栈。
+ * 以此类推
+ */
 public class GraphTopologic {
 
   private int numVertexes;

@@ -9,7 +9,8 @@
 package com.example.god.androidmore.datastructure;
 
 /**
- *链式存储方式线性表（linkedList）：插入效率高，查询效率低
+ * 链式存储方式线性表（linkedList）：插入效率高，查询效率低
+ * 通过内部维护连接 Node对象 来实现链式存储结构
  * @param <T>
  */
 public class LinkedList<T> implements List<T> {

@@ -14,6 +14,7 @@ import java.util.LinkedList;
  * 图-临接矩阵实现
  * 图的两种遍历：深度优先遍历，广度优先遍历
  * 图的最小生成树的两种算法：普利姆算法，克鲁斯卡尔算法
+ * 最短路径：迪杰斯特拉算法
  */
 
 public class Graph {
