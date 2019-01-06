@@ -10,7 +10,7 @@ package com.example.god.androidmore.algorithm.sort;
 
 /**
  * 快速排序
- * 确定一个基数，将数组分成大小的两组，依次递归。
+ * 确定一个基数，将数组分成大小的两组，依次递归。不稳定排序
  */
 public class QuickSort {
 

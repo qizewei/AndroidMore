@@ -11,8 +11,9 @@ package com.example.god.androidmore.algorithm.sort;
 import static com.example.god.androidmore.algorithm.sort.BubbleSort.replaceNum;
 
 /**
- * 堆排序
+ * 堆排序(不稳定排序，较大的序列性能优)
  * 对数组进行堆的构建（使用递归），然后从构建好的大堆中依次拿出数据。
+ * 任何根节点要比他的子节点大的话，叫大堆。对应的叫小堆。
  */
 public class HeapSort {
 

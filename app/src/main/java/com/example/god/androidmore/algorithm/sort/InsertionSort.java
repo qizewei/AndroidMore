@@ -11,6 +11,8 @@ package com.example.god.androidmore.algorithm.sort;
 /**
  * 插入排序
  * 遍历元素，将遍历的元素插入前面已经排好序的数组
+ * 优点，稳定，快。
+ * 缺点：比较次数不固定，数据量庞大的话，链表可以解决这个问题
  */
 public class InsertionSort {
 
