@@ -3,16 +3,15 @@
 3. 传统的IPC没有任何安全措施，无法获得对方可靠地UIO/PID。在数据包中存入UIDPID不可靠。
 4. Binder安全可靠，基于CS，传输过程只有一次拷贝，为发送添加PIDUID，支持实名Binder也支持匿名。
 5. Binder使用了面向对象：即Server端中一个对象，多个Client中都可以有引用，引用可以是强弱引用，可以传给其他进程。
+6. 强弱类型：client指向的Binder是强类型，确保了只要有引用Binder实体就不会被释放。
 6. 面向对象只是针对应用程序而言，Binder驱动和内核其它模块是使用C语言实现，没有类和对象的概念。Binder驱动为面向对象的进程间通信提供底层支持。
 7. Binder框架定义了四个角色：Server，Client，ServiceManager，Binder驱动。其中Server，Client，SMgr运行于用户空间，驱动运行于内核空间。
 8. Binder驱动连接了Server，Client，ServiceManager。
-8. SMgr的作用是将字符形式的Binder名字转化成Client中对该Binder的引用。
-9. Server创建了Binder实体，为其取一个字符形式，可读易记的名字，将这个Binder连同名字和Serve以数据包的形式通过Binder驱动发送给SMgr，完成注册。
+8. **SMgr的作用是将字符形式的Binder名字转化成Client中对该Binder的引用,使得Client能够通过Binder名字获得对Server中Binder实体的引用。**。
+9. Server创建了Binder实体，为其取一个字符形式，可读易记的名字，将这个Binder连同名字和Server以数据包的形式通过Binder驱动发送给SMgr，完成注册。
 10. Serve向SMgr注册时，系统有默认实现的Binder：0号引用。Server若要向SMgr注册自己Binder就必需通过0这个引用号和SMgr的Binder通信。
-11. 强弱类型：client指向的Binder是强类型，确保了只要有引用Binder实体就不会被释放。
 12. 匿名Binder即没有向SMgr注册过而直接传给Client的Binder。
 13. Binder和Proxy设计模式结合：将接口函数定义在一个抽象类中，Server和Client都会以该抽象类为基类实现所有接口函数，所不同的是Server端是真正的功能实现，而Client端是对这些函数远程调用请求的包装。
 12. 除了通常意义上用来通信的Binder，还有一种特殊的Binder：文件Binder。这种Binder的基本思想是：将文件看成Binder实体，进程打开的文件号看成Binder的引用。一个进程可以将它打开文件的文件号传递给另一个进程，从而另一个进程也打开了同一个文件，就象Binder的引用在进程之间传递一样。
-13. 通常数据传输的接收端有两个队列：数据包接收队列和（线程）等待队列，用以
-缓解供需矛盾。
+13. 通常数据传输的接收端有两个队列：数据包接收队列和（线程）等待队列，用以缓解供需矛盾。
 14. 异步交互做了限流，令其为同步交互让路：Binder实体，只要有一个异步交互没有处理完毕，那么接下来发给该实体的异步交互包将不再投递到to-do队列中，而是阻塞在驱动为该实体开辟的异步交互接收队列中，但这期间同步交互依旧不受限制直接进入to-do队列获得处理。
