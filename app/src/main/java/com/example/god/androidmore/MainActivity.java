@@ -8,8 +8,7 @@
 
 package com.example.god.androidmore;
 
-import static com.example.god.androidmore.algorithm.other.Other.Multiplication;
-import static com.example.god.androidmore.algorithm.sort.HeapSort.heapSort;
+import static com.example.god.androidmore.algorithm.other.Other.multiplication;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -24,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    Multiplication("789654","789654");
+    multiplication("789654","789654");
 
 //    L型骨牌问题
 //    ChessBoardQuestion(4);
@@ -45,10 +44,10 @@ public class MainActivity extends AppCompatActivity {
 //    heapSort(src);
 //    logOut("堆排序", src);
 
-//    BubbleSort(src);
+//    bubbleSort(src);
 //    logOut("冒泡排序", src);
 //
-//    QuickSort(src, 0, src.length - 1);
+//    quickSort(src, 0, src.length - 1);
 //    logOut("快速排序", src);
 //
 //    selsctionSort(src);
@@ -68,9 +67,9 @@ public class MainActivity extends AppCompatActivity {
 //    logOut("二分查找", i, searchValue);
 
 //    汉诺塔问题
-//    Hanoi(3, "A", "B", "C");
+//    hanoi(3, "A", "B", "C");
 
-//    Log.d(TAG, "onCreate: 最大公约数为" + MaxDivisor(9, 4));
+//    Log.d(TAG, "onCreate: 最大公约数为" + maxDivisor(9, 4));
 
 //    泊松分酒
 //    putDrive(12, 0, 0, 6, 12, 8, 5);
@@ -82,9 +81,9 @@ public class MainActivity extends AppCompatActivity {
 //    logOut("基数排序", src);
 
 //    约瑟夫问题
-//    Josephus(12,4);
+//    josephus(12,4);
 
-//    DP("android","ahiroi");
+//    mDP("android","ahiroi");
   }
 
   private void logOut(String method, int[] src) {

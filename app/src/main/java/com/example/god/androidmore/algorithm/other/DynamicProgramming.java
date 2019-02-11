@@ -15,10 +15,10 @@ public class DynamicProgramming {
   private static final String TAG = "DynamicProgramming";
 
   /**
-   * 最长公共子序列（Longest Common Subsequence,LCS）
+   * 最长公共子序列（Longest Common Subsequence,mLCS）
    * 先求出第一行和第一列的值，然后根据 对应的二维数组的 性质求出剩余值。
    */
-  public static void LCS(String strO, String strT) {
+  public static void mLCS(String strO, String strT) {
     char[] str1 = strO.toCharArray();
     char[] str2 = strT.toCharArray();
     int m = str1.length;
@@ -54,7 +54,7 @@ public class DynamicProgramming {
       }
     }
 
-    Log.d(TAG, "LCS: " + res[m - 1][n - 1]);
+    Log.d(TAG, "mLCS: " + res[m - 1][n - 1]);
 
     for (int i = 0; i < m; i++) {
       for (int j = 0; j < n; j++) {
@@ -67,7 +67,7 @@ public class DynamicProgramming {
   /**
    * 最长公共子串
    */
-  public static void DP(String str1, String str2) {
+  public static void mDP(String str1, String str2) {
     char[] chars1 = str1.toCharArray();
     char[] chars2 = str2.toCharArray();
     int m = chars1.length;
@@ -109,7 +109,7 @@ public class DynamicProgramming {
       }
     }
 
-    Log.d(TAG, "DP: " + max);
+    Log.d(TAG, "mDP: " + max);
 
     for (int i = 0; i < m; i++) {
       for (int j = 0; j < n; j++) {

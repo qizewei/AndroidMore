@@ -42,7 +42,7 @@ public class BackTracking {
           getLineQueens(lineCount + 1);
         } else {
           num++;
-          PrintQueen(num, allResult);
+          printQueen(num, allResult);
         }
       }
     }
@@ -51,7 +51,7 @@ public class BackTracking {
   /**
    * 打印结果
    */
-  static void PrintQueen(int num, int[] result) {
+  static void printQueen(int num, int[] result) {
     char[][] results = new char[MAX_QUEEN][MAX_QUEEN];
     System.out.print("第" + num + "种排列:\n");
     for (int i = 0; i < result.length; i++) {

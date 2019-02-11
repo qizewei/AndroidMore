@@ -14,18 +14,18 @@ public class DivideAndConquer {
    * 球队比赛排列问题
    * @param num
    */
-  public static void TreamQuestion(int num) {
+  public static void treamQuestion(int num) {
     int[][] datas = new int[num][num];
-    EightTream(datas, datas.length);
-    PrintResult(datas);
+    eightTream(datas, datas.length);
+    printResult(datas);
   }
 
-  public static void EightTream(int[][] datas, int num) {
+  public static void eightTream(int[][] datas, int num) {
     if (num == 1) {
       datas[0][0] = 1;
     } else {
       int m = num / 2;
-      EightTream(datas, m);
+      eightTream(datas, m);
 
       for (int i = 0; i < m; i++) {
         for (int j = m; j < num; j++) {
@@ -51,13 +51,13 @@ public class DivideAndConquer {
 
   static int type = 0;
 
-  public static void ChessBoardQuestion(int num) {
+  public static void chessBoardQuestion(int num) {
     int[][] datas = new int[num][num];
-    ChessBoard(1, 0, 0, 0, datas.length, datas);
-    PrintResult(datas);
+    chessBoard(1, 0, 0, 0, datas.length, datas);
+    printResult(datas);
   }
 
-  public static void ChessBoard(int spcR, int spcC, int starR, int starC, int num, int[][] data) {
+  public static void chessBoard(int spcR, int spcC, int starR, int starC, int num, int[][] data) {
 
     if (num != 1) {
       int m = num / 2;
@@ -66,34 +66,34 @@ public class DivideAndConquer {
 
       //左上角
       if (spcR < starR + m && spcC < starC + m) {
-        ChessBoard(spcR, spcC, starR, starC, m, data);
+        chessBoard(spcR, spcC, starR, starC, m, data);
       } else {
         data[starR + m - 1][starC + m - 1] = n;
-        ChessBoard(starR + m - 1, starC + m - 1, starR, starC, m, data);
+        chessBoard(starR + m - 1, starC + m - 1, starR, starC, m, data);
       }
 
       //左下角
       if (spcR < starR + m && spcC >= starC + m) {
-        ChessBoard(spcR, spcC, starR, starC + m, m, data);
+        chessBoard(spcR, spcC, starR, starC + m, m, data);
       } else {
         data[starR + m - 1][starC + m] = n;
-        ChessBoard(starR + m - 1, starC + m, starR, starC + m, m, data);
+        chessBoard(starR + m - 1, starC + m, starR, starC + m, m, data);
       }
 
       //右上角
       if (spcR >= starR + m && spcC < starC + m) {
-        ChessBoard(spcR, spcC, starR + m, starC, m, data);
+        chessBoard(spcR, spcC, starR + m, starC, m, data);
       } else {
         data[starR + m][starC + m - 1] = n;
-        ChessBoard(starR + m, starC + m - 1, starR + m, starC, m, data);
+        chessBoard(starR + m, starC + m - 1, starR + m, starC, m, data);
       }
 
       //右下角
       if (spcR >= starR + m && spcC >= starC + m) {
-        ChessBoard(spcR, spcC, starR + m, starC + m, m, data);
+        chessBoard(spcR, spcC, starR + m, starC + m, m, data);
       } else {
         data[starR + m][starC + m] = n;
-        ChessBoard(starR + m, starC + m, starR + m, starC + m, m, data);
+        chessBoard(starR + m, starC + m, starR + m, starC + m, m, data);
       }
     }
   }
@@ -102,7 +102,7 @@ public class DivideAndConquer {
    * 打印结果
    * @param datas
    */
-  public static void PrintResult(int datas[][]) {
+  public static void printResult(int datas[][]) {
     for (int i = 0; i < datas.length; i++) {
       for (int j = 0; j < datas.length; j++) {
         System.out.print(datas[i][j]);

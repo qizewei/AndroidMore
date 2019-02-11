@@ -26,7 +26,7 @@ public class MyQueue {
     list.clear();
   }
 
-  public boolean QueueEmpty()//判断队列是否为空
+  public boolean queueEmpty()//判断队列是否为空
   {
     return list.isEmpty();
   }
@@ -44,12 +44,12 @@ public class MyQueue {
     return "队列为空";
   }
 
-  public int QueueLength()//获取队列长度
+  public int queueLength()//获取队列长度
   {
     return list.size();
   }
 
-  public Object QueuePeek()//查看队首元素
+  public Object queuePeek()//查看队首元素
   {
     return list.getFirst();
   }

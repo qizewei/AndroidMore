@@ -21,7 +21,7 @@ public class Other {
    * 约瑟夫问题
    * 创建头尾相连的链表解决问题
    */
-  public static void Josephus(int total, int count) {
+  public static void josephus(int total, int count) {
     class Node {
 
       private int n;
@@ -44,20 +44,20 @@ public class Other {
     int p = 1;
     while (m.n != m.next.n) {
       if (p == count - 1) {
-        Log.d(TAG, "Josephus: 枪毙" + m.next.n);
+        Log.d(TAG, "josephus: 枪毙" + m.next.n);
         m.next = m.next.next;
         p = 0;
       }
       m = m.next;
       p = p + 1;
     }
-    Log.d(TAG, "Josephus: 剩余" + m.n);
+    Log.d(TAG, "josephus: 剩余" + m.n);
   }
 
   /**
    * 大数相乘算法
    */
-  public static void Multiplication(String str, String str2) {
+  public static void multiplication(String str, String str2) {
 
     char[] intOne = str.toCharArray();
     char[] intTwo = str2.toCharArray();

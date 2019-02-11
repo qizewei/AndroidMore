@@ -14,12 +14,12 @@ package com.example.god.androidmore.algorithm.sort;
  */
 public class QuickSort {
 
-  public static void QuickSort(int[] src, int star, int end) {
+  public static void quickSort(int[] src, int star, int end) {
 
     if (star < end) {
       int index = oneSort(src, star, end);
-      QuickSort(src, star, index - 1);
-      QuickSort(src, index + 1, end);
+      quickSort(src, star, index - 1);
+      quickSort(src, index + 1, end);
     }
   }
 
