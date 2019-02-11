@@ -90,6 +90,16 @@
 <br/>
 [03-Binder的原理](https://github.com/QzwJuHao/AndroidMore/blob/master/wiki/03-Binder%E7%9A%84%E5%8E%9F%E7%90%86.md)
 <br/>
+[04-Activity_知识点](https://github.com/QzwJuHao/AndroidMore/blob/master/wiki/04-Activity_%E7%9F%A5%E8%AF%86%E7%82%B9.md)
+<br/>
+[05-View的绘制](https://github.com/QzwJuHao/AndroidMore/blob/master/wiki/05-View%E7%9A%84%E7%BB%98%E5%88%B6.md)
+<br/>
+[06-消息队列](https://github.com/QzwJuHao/AndroidMore/blob/master/wiki/06-%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97.md)
+<br/>
+[07-Service难点](https://github.com/QzwJuHao/AndroidMore/blob/master/wiki/07-Service%E9%9A%BE%E7%82%B9.md)
+<br/>
+[08-Window相关](https://github.com/QzwJuHao/AndroidMore/blob/master/wiki/08-Window%E7%9B%B8%E5%85%B3.md)
+<br/>
 
 
 #### 联系方式
