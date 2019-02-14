@@ -83,7 +83,6 @@
 <br/>
 
 ## Android
-#### IPC部分（AIDL，Binder等）
 [01-线程和进程](https://github.com/QzwJuHao/AndroidMore/blob/master/wiki/01-%E7%BA%BF%E7%A8%8B%E5%92%8C%E8%BF%9B%E7%A8%8B.md)
 <br/>
 [02-Android IPC](https://github.com/QzwJuHao/AndroidMore/blob/master/wiki/02-Android%20IPC.md)
