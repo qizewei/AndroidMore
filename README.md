@@ -104,8 +104,16 @@
 [10-RxJava 和 Retrofit 的工作原理](https://github.com/QzwJuHao/AndroidMore/blob/master/wiki/10-RxJava%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86.md)
 <br/>
 
+### Android
+**Jetpack系列，从使用入门 到 源码解析工作原理**<br/>
+
+[01-Jetpack系列 - Lifecycle从入门到源码](https://github.com/QzwJuHao/AndroidMore/blob/master/wiki/Jetpack/Jetpack%E7%B3%BB%E5%88%97%20-%20Lifecycle%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%BA%90%E7%A0%81.md)
+<br/>
+[02-jetpack系列 - viewmodel从入门到源码](https://github.com/QzwJuHao/AndroidMore/blob/master/wiki/Jetpack/jetpack%E7%B3%BB%E5%88%97%20-%20viewmodel%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%BA%90%E7%A0%81.md)
+<br/>
 
 #### 联系方式
-博客：https://blog.csdn.net/qizewei123<br/>
+掘金：https://juejin.im/user/57fdc5ef2e958a0055a39ee2/posts<br/>
+CSDN：https://blog.csdn.net/qizewei123<br/>
 E-mail：qizewei@vip.qq.com<br/>
 微信：779754469
