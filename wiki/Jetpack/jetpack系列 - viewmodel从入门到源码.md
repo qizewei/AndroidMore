@@ -300,12 +300,15 @@ ViewModel的实现原理：<br/>
 
 ---------------------------------------   **结束分割线**
 
+##### END
+
 我是雷加,如果您喜欢我的文章，请留下你的赞;如有疑问和建议，请在评论区留言<br/>
-欢迎关注我的掘金，感谢 ~~~ <br/>
-掘金 : [https://juejin.im/user/57fdc5ef2e958a0055a39ee2](https://juejin.im/user/57fdc5ef2e958a0055a39ee2) <br/>
+**我的[Github](https://github.com/QzwJuHao),欢迎关注~**<br/>
 
 Jetpack 专栏：<br/>
-**Lifecycle：**[Jetpack系列 - Lifecycle从入门到源码](https://juejin.im/post/5c77ea3c5188255dbd585197)<br/>
+**Lifecycle：**[Jetpack系列 - Lifecycle从入门到源码](https://blog.csdn.net/qizewei123/article/details/88051500)<br/>
+**ViewModel：**[Jetpack系列 - ViewModel从入门到源码](https://blog.csdn.net/qizewei123/article/details/88183933)<br/>
+**LiveData：**[Jetpack系列 - LiveData从入门到源码](https://blog.csdn.net/qizewei123/article/details/88416990)<br/>
 
 ---------------------------------------   **The End**
 

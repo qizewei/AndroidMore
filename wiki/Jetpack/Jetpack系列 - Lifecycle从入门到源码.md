@@ -270,14 +270,15 @@ public @interface OnLifecycleEvent {
 当然，我们自己也可以写一套接口回调来监控组件的生命周期，但是我们不得不考虑在哪里设置监听器，生命周期的问题。
 **其实我们使用 Lifecycle 真正的理由是，Lifecycle(LifecycleRegistry)类帮我们处理了大量的与宿主组件生命周期相关的问题，使我们的代码更简洁。专心处理业务逻辑即可。**
 
----------------------------------------   **结束分割线**
+##### END
 
 我是雷加,如果您喜欢我的文章，请留下你的赞;如有疑问和建议，请在评论区留言<br/>
-欢迎关注我的掘金，感谢 ~~~ <br/>
-掘金 : [https://juejin.im/user/57fdc5ef2e958a0055a39ee2](https://juejin.im/user/57fdc5ef2e958a0055a39ee2) <br/>
+**我的[Github](https://github.com/QzwJuHao),欢迎关注~**<br/>
 
-我的 Jetpack 专栏：<br/>
-**ViewModel：**[Jetpack系列 - ViewModel从入门到源码](https://juejin.im/post/5c7e1b3d5188251b8d475567)
+Jetpack 专栏：<br/>
+**Lifecycle：**[Jetpack系列 - Lifecycle从入门到源码](https://blog.csdn.net/qizewei123/article/details/88051500)<br/>
+**ViewModel：**[Jetpack系列 - ViewModel从入门到源码](https://blog.csdn.net/qizewei123/article/details/88183933)<br/>
+**LiveData：**[Jetpack系列 - LiveData从入门到源码](https://blog.csdn.net/qizewei123/article/details/88416990)<br/>
 
 ---------------------------------------   **The End**
 
