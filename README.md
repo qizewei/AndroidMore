@@ -101,7 +101,7 @@
 <br/>
 [09-AOP编程](https://github.com/QzwJuHao/AndroidMore/blob/master/wiki/09-AOP%E7%BC%96%E7%A8%8B.md)
 <br/>
-[10-RxJava 和 Retrofit 的工作原理](https://github.com/QzwJuHao/AndroidMore/blob/master/wiki/10-RxJava%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86.md)
+[10-RxJava 和 Retrofit 的工作原理](https://github.com/QzwJuHao/AndroidMore/blob/master/wiki/10-RxJava%20%E5%92%8C%20Retrofit%20%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86.md)
 <br/>
 [11-Activity的启动流程](https://github.com/QzwJuHao/AndroidMore/blob/master/wiki/11-Activity%E7%9A%84%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B.md)
 <br/>
