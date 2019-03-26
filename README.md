@@ -105,6 +105,8 @@
 <br/>
 [11-Activity的启动流程](https://github.com/QzwJuHao/AndroidMore/blob/master/wiki/11-Activity%E7%9A%84%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B.md)
 <br/>
+[12-Android 中的 ClassLoader](https://github.com/QzwJuHao/AndroidMore/blob/master/wiki/12-Android%20%E4%B8%AD%E7%9A%84%20ClassLoader.md)
+<br/>
 
 ### Jetpack
 Jetpack系列，从使用入门讲解 到 源码解析工作原理<br/>
@@ -114,6 +116,8 @@ Jetpack系列，从使用入门讲解 到 源码解析工作原理<br/>
 [02-jetpack系列 - ViewModel从入门到源码](https://github.com/QzwJuHao/AndroidMore/blob/master/wiki/Jetpack/jetpack%E7%B3%BB%E5%88%97%20-%20viewmodel%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%BA%90%E7%A0%81.md)
 <br/>
 [03-jetpack系列 - LiveData从入门到源码](https://github.com/QzwJuHao/AndroidMore/blob/master/wiki/Jetpack/Jetpack%E7%B3%BB%E5%88%97%20-%20LiveData%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%BA%90%E7%A0%81.md)
+<br/>
+[04-jetpack系列 - Palette（调色板）入门使用指南](https://github.com/QzwJuHao/AndroidMore/blob/master/wiki/Jetpack/Jetpack%E7%B3%BB%E5%88%97%20-%20Palette%EF%BC%88%E8%B0%83%E8%89%B2%E6%9D%BF%EF%BC%89%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.md)
 <br/>
 
 #### 联系方式
